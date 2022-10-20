@@ -8,55 +8,47 @@
     <title>Document</title>
   </head>
   <body class="bg-blue-800">
-    <!-- <nav class="flex justify-between items-center p-4 text-white">
-      <div class="icon">
-        <a href="#">
-          <img src="./Assets/peach.png" class="w-8 mx-4" alt="Icon" />
-        </a>
-      </div>
-      <div class="links align-middle">
-        <img src="./Assets/more.png" id="menu" class="w-4 sm:hidden" alt="" />
-      </div>
-      <div id="detailedMenu" class="opacity-0">
-        <ul class="sm:flex transition ease-out duration-500 sm:items-center">
-          <li class="mx-4 sm:inline hover:cursor-pointer">Home</li>
-          <li class="mx-4 sm:inline hover:cursor-pointer">About</li>
-          <li class="mx-4 sm:inline hover:cursor-pointer">Contact</li>
-          <li class="inline">
-            <button
-              class="rounded-full bg-pink-500 drop-shadow-md text-white px-3 py-1"
-            >
-              More
-            </button>
-          </li>
-        </ul>
-      </div>
-    </nav> -->
     <div class="navbar flex justify-between items-center p-4">
-      <div class="hamburger inline-block p-4 cursor-pointer md:hidden">
-        <div class="line h-0.5 w-6 bg-white my-2"></div>
-        <div class="line h-0.5 w-6 bg-white my-2"></div>
-        <div class="line h-0.5 w-6 bg-white my-2"></div>
-      </div>
-      <div class="logo cursor-pointer order-3">
-        <img src="./Assets/peach.png" class="w-8 mx-4" alt="Icon" />
+      <div
+        id="hamburger"
+        class="hamburger flex flex-col hover:cursor-pointer sm:hidden"
+      >
+        <span class="bg-white h-0.5 w-5 m-1 rounded"></span>
+        <span class="bg-white h-0.5 w-5 m-1 rounded"></span>
+        <span class="bg-white h-0.5 w-5 m-1 rounded"></span>
       </div>
       <div
         id="detailedMenu"
-        class="order-1 absolute -translate-x-96 bg-white text-blue-800 md:inline-block md:bg-transparent md:relative md:text-white"
+        class="listed-menu transition ease-in-out delay-5000 absolute top-[-500vh] left-[-500vh] w-[50vw] h-[50h] overflow-auto justify-between rounded-md"
       >
-        <ul class="sm:flex transition ease-out duration-500 sm:items-center">
-          <li class="mx-4 sm:inline hover:cursor-pointer">Home</li>
-          <li class="mx-4 sm:inline hover:cursor-pointer">About</li>
-          <li class="mx-4 sm:inline hover:cursor-pointer">Contact</li>
-          <li class="inline">
-            <button
-              class="rounded-full bg-pink-500 drop-shadow-md text-white px-3 py-1"
-            >
-              More
+        <span id="remove" class="h-5 w-5 absolute right-2 top-2"
+          ><img src="./Assets/remove.png" alt=""
+        /></span>
+        <ul
+          class="flex flex-col text-white align-middle justify-between bg-blue-500"
+        >
+          <li class="m-4 hover:cursor-pointer">Home</li>
+          <li class="m-4 hover:cursor-pointer">About</li>
+          <li>
+            <button class="rounded-full bg-pink-500 m-4 text-white px-2">
+              Contact Us
             </button>
           </li>
         </ul>
+      </div>
+      <div class="detailed-menu hidden sm:inline-block">
+        <ul class="flex text-white align-middle">
+          <li class="m-4 hover:cursor-pointer">Home</li>
+          <li class="m-4 hover:cursor-pointer">About</li>
+          <li>
+            <button class="rounded-full bg-pink-500 m-4 text-white px-2">
+              Contact Us
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="logo cursor-pointer order-3">
+        <img src="./Assets/peach.png" class="w-8 mx-4" alt="Icon" />
       </div>
     </div>
     <section class="m-4 md:flex justify-evenly">
